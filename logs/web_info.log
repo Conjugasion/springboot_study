@@ -1,0 +1,18 @@
+2020-05-20 11:09:57.328 [main] INFO  c.e.springaopdemo.SpringaopdemoApplicationTests - Starting SpringaopdemoApplicationTests on HD-110ZN-001210 with PID 13736 (started by tangdongfan in E:\study\springboot_demo)
+2020-05-20 11:09:57.330 [main] INFO  c.e.springaopdemo.SpringaopdemoApplicationTests - The following profiles are active: constant
+2020-05-20 11:09:59.580 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'jmqTaskExecutor'
+2020-05-20 11:10:00.971 [main] INFO  c.e.springaopdemo.SpringaopdemoApplicationTests - Started SpringaopdemoApplicationTests in 4.702 seconds (JVM running for 6.578)
+2020-05-20 11:10:01.262 [main] INFO  c.e.springaopdemo.SpringaopdemoApplicationTests - age = 26
+2020-05-20 11:10:01.301 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'jmqTaskExecutor'
+2020-05-20 11:15:20.116 [main] INFO  c.e.springaopdemo.SpringaopdemoApplicationTests - Starting SpringaopdemoApplicationTests on HD-110ZN-001210 with PID 14596 (started by tangdongfan in E:\study\springboot_demo)
+2020-05-20 11:15:20.118 [main] INFO  c.e.springaopdemo.SpringaopdemoApplicationTests - The following profiles are active: constant
+2020-05-20 11:15:22.477 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'jmqTaskExecutor'
+2020-05-20 11:15:23.751 [main] INFO  c.e.springaopdemo.SpringaopdemoApplicationTests - Started SpringaopdemoApplicationTests in 4.699 seconds (JVM running for 6.689)
+2020-05-20 11:15:24.013 [main] INFO  c.e.springaopdemo.SpringaopdemoApplicationTests - age = 26
+2020-05-20 11:15:24.043 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'jmqTaskExecutor'
+2020-05-20 11:15:43.056 [main] INFO  c.e.springaopdemo.SpringaopdemoApplicationTests - Starting SpringaopdemoApplicationTests on HD-110ZN-001210 with PID 10432 (started by tangdongfan in E:\study\springboot_demo)
+2020-05-20 11:15:43.058 [main] INFO  c.e.springaopdemo.SpringaopdemoApplicationTests - The following profiles are active: constant
+2020-05-20 11:15:45.342 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'jmqTaskExecutor'
+2020-05-20 11:15:46.521 [main] INFO  c.e.springaopdemo.SpringaopdemoApplicationTests - Started SpringaopdemoApplicationTests in 4.667 seconds (JVM running for 6.355)
+2020-05-20 11:15:46.816 [main] INFO  c.e.springaopdemo.SpringaopdemoApplicationTests - age = 26
+2020-05-20 11:15:46.845 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'jmqTaskExecutor'
