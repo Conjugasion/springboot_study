@@ -14,7 +14,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 @Configuration
 public class ExecutorConfig {
 
-    @Bean
+    @Bean(name = "myTaskExecutor")
     public TaskExecutor taskExecutor() {
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
         // 设置核心线程数

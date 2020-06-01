@@ -34,6 +34,7 @@ class SpringaopdemoApplicationTests {
 	Student student;
 
 	@Autowired
+	@Qualifier("myTaskExecutor")
 	TaskExecutor taskExecutor;
 
 	@Autowired
