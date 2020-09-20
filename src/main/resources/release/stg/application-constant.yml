@@ -4,3 +4,20 @@ demo:
     age: 26
     hobby: coding
     address: shanghai
+book:
+  title: 哈利波特
+  price: 55元
+logging:
+  level:
+    root: info
+devtools:
+  livereload:
+    enabled: true #是否支持livereload
+  restart:
+    enabled: true #是否支持热部署
+spring:
+  http:
+    encoding:
+      force: true # 静态资源编码，防止出现乱码
+  resources:
+    static-locations: classpath:/static/,classpath:/public/ # 手动指定静态文件在哪

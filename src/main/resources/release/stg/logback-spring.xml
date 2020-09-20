@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false" >
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/info.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 归档文件名“.zip或.gz结尾”,表示归档文件自动压缩 -->
+            <!-- 不自动压缩 -->
+            <FileNamePattern>logs/info.%d{yyyy-MM-dd}.log</FileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS}[%-5level][%thread]%logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="errorFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/error.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 归档文件名“.zip或.gz结尾”,表示归档文件自动压缩 -->
+            <!-- 不自动压缩 -->
+            <FileNamePattern>logs/error.log.%d{yyyy-MM-dd}.log</FileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level> <!-- 日志过滤级别 -->
+        </filter>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS}[%-5level][%thread]%logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="warnFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/warn.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 归档文件名“.zip或.gz结尾”,表示归档文件自动压缩 -->
+            <!-- 不自动压缩 -->
+            <FileNamePattern>logs/warn.log.%d{yyyy-MM-dd}.log</FileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>WARN</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS}[%-5level][%thread]%logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <appender name ="STDOUT_ASYNC" class= "ch.qos.logback.classic.AsyncAppender" >
+        <discardingThreshold >0</discardingThreshold>
+        <!-- 更改默认的队列的深度,该值会影响性能.默认值为256 -->
+        <queueSize>512</queueSize>
+        <!-- 添加附加的appender,最多只能添加一个 -->
+        <!-- <appender-ref ref ="FILE"/> -->
+        <appender-ref ref ="STDOUT"/>
+    </appender>
+    <appender name ="ASYNC" class= "ch.qos.logback.classic.AsyncAppender" >
+        <discardingThreshold >0</discardingThreshold>
+        <!-- 更改默认的队列的深度,该值会影响性能.默认值为256 -->
+        <queueSize>512</queueSize>
+        <!-- 添加附加的appender,最多只能添加一个 -->
+        <appender-ref ref ="FILE"/>
+    </appender>
+    <appender name ="ERROR_ASYNC" class= "ch.qos.logback.classic.AsyncAppender" >
+        <discardingThreshold >0</discardingThreshold>
+        <!-- 更改默认的队列的深度,该值会影响性能.默认值为256 -->
+        <queueSize>512</queueSize>
+        <!-- 添加附加的appender,最多只能添加一个 -->
+        <appender-ref ref ="errorFile"/>
+    </appender>
+    <appender name ="WARN_ASYNC" class= "ch.qos.logback.classic.AsyncAppender" >
+        <discardingThreshold >0</discardingThreshold>
+        <!-- 更改默认的队列的深度,该值会影响性能.默认值为256 -->
+        <queueSize>512</queueSize>
+        <!-- 添加附加的appender,最多只能添加一个 -->
+        <appender-ref ref ="warnFile"/>
+    </appender>
+    <!-- 至多只能配置一个root -->
+    <root level ="INFO">
+        <appender-ref ref ="STDOUT_ASYNC"/>
+        <appender-ref ref ="ASYNC"/>
+        <appender-ref ref ="WARN_ASYNC"/>
+        <appender-ref ref ="ERROR_ASYNC"/>
+    </root>
+</configuration>

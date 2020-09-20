@@ -1,0 +1,1 @@
+alert("springboot默认的静态资源路径：public文件夹和static文件夹下")

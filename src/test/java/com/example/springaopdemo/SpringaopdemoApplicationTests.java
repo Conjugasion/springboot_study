@@ -1,21 +1,16 @@
 package com.example.springaopdemo;
 
-import com.example.springaopdemo.Configuration.ExecutorConfig;
 import com.example.springaopdemo.Entity.Student;
-import com.example.springaopdemo.Mapper.StudentMapper;
-import com.example.springaopdemo.Service.AsyncTask;
+import com.example.springaopdemo.Service.Impl.AsyncTaskServiceImpl;
 import com.example.springaopdemo.Service.BrowserService;
 import com.example.springaopdemo.Service.StudentService;
-import com.example.springaopdemo.Service.StudentServiceImpl;
 import com.example.springaopdemo.Task.ScheduleJob;
 import org.junit.jupiter.api.Test;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.task.TaskExecutor;
 
@@ -38,7 +33,7 @@ class SpringaopdemoApplicationTests {
 	TaskExecutor taskExecutor;
 
 	@Autowired
-	AsyncTask asyncTask;
+    AsyncTaskServiceImpl asyncTask;
 
 	@Autowired
 	StudentService studentService;

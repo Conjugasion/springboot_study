@@ -4,3 +4,15 @@ demo:
     age: 90
     hobby: fish
     address: zhejiang
+book:
+  title: 哈姆莱特
+  price: 20元
+logging:
+  level:
+    root: info
+spring:
+  http:
+    encoding:
+      force: true # 静态资源编码，防止出现乱码
+  resources:
+    static-locations: classpath:/static/,classpath:/public/ # 手动指定静态文件在哪
