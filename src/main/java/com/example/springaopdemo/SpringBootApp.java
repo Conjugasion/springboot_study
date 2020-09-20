@@ -16,7 +16,7 @@ public class SpringBootApp {
 
 }
 
-// 打成war包的必要配置
+// 打成war包的必要配置 包括启动类、pom文件共计三处修改
 /*public class SpringBootApp extends SpringBootServletInitializer {
 
 	public static void main(String[] args) throws InterruptedException {
